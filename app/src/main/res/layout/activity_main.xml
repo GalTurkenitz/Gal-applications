@@ -9,29 +9,9 @@
     tools:ignore="MissingConstraints">
 
 
-    <Button
-        android:id="@+id/buttonShow"
-        android:layout_width="114dp"
-        android:layout_height="48dp"
-        android:text="Show Image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786"/>
 
-    <Button
-        android:id="@+id/buttonHide"
-        android:layout_width="114dp"
-        android:layout_height="48dp"
-        android:text="Hide Image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
+
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -60,12 +40,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.202" />
 
-    <Button
-        android:id="@+id/button"
+
+
+    <Switch
+        android:id="@+id/flick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="בדוק אותי"
-        android:onClick="num"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -81,5 +61,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:max="100"
+        android:progress="100" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
