@@ -1,74 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:ignore="MissingConstraints">
-
-
-
-
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="182dp"
-        android:layout_height="320dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567"
-        app:srcCompat="@drawable/img0" />
+    android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/ghj"
-        android:layout_width="wrap_content"
+        android:id="@+id/etFname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="תכתוב"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        android:hint="First Name"
+        android:layout_marginBottom="12dp"
+        android:inputType="textPersonName" />
 
-
-
-    <Switch
-        android:id="@+id/flick"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etLname"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"/>
+        android:hint="Last Name"
+        android:layout_marginBottom="12dp"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginBottom="20dp" />
 
     <TextView
-        android:id="@+id/l"
-        android:layout_width="159dp"
-        android:layout_height="81dp"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="250dp"
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="100"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="73dp" />
+        android:text="welcome:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
