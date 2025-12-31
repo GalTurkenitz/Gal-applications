@@ -43,9 +43,9 @@ public class dActivity extends AppCompatActivity implements View.OnClickListener
         d.setCancelable(true);
 
         etUserName = d.findViewById(R.id.etUserName);
-        etPass = d.findViewById(R.id.etPassword);
+        etPass = d.findViewById(R.id.etPass);
 
-        btnCustomLogin = d.findViewById(R.id.btnDialogLogin);
+        btnCustomLogin = d.findViewById(R.id.btnCustomLogin);
         btnCustomLogin.setOnClickListener(this);
 
         d.show();
