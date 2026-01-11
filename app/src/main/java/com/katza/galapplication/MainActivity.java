@@ -3,6 +3,7 @@ package com.katza.galapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -84,16 +85,20 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_login) {
-            Toast.makeText(this, "You selected login", Toast.LENGTH_SHORT).show();
-            return true;
+            Intent intent = new Intent(this, dActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.action_register) {
-            Toast.makeText(this, "You selected register", Toast.LENGTH_SHORT).show();
-            return true;
+            Intent intent = new Intent(this, DynamicActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.action_exit) {
-            Toast.makeText(this, "You selected exit", Toast.LENGTH_SHORT).show();
-            return true;
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
