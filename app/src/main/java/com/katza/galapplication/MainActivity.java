@@ -100,6 +100,13 @@ public class MainActivity extends AppCompatActivity {
 
             finish();
         }
+    else if (id == R.id.first) {
+        Intent intent = new Intent(this, firstActivity.class);
+        startActivity(intent);
+
+        finish();
+    }
+
 
         return super.onOptionsItemSelected(item);
     }

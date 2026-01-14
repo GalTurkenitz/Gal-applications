@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GalApplication">
         <activity
+            android:name=".secondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firstActivity"
+            android:exported="false" />
+        <activity
             android:name=".DynamicActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

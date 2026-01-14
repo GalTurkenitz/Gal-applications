@@ -18,5 +18,10 @@
         android:title="Exit"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/first"
+        android:title="first"
+        app:showAsAction="never" />
+
 
 </menu>
