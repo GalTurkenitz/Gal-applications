@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,14 +50,17 @@ public class firstActivity extends AppCompatActivity {
         // Launcher שמקבל תוצאה מה-second
         secondLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        int calculatedAge = result.getData().getIntExtra("calculatedAge", -1);
-                        if (calculatedAge != -1) {
-                            tvAgeDisplayValue.setText(String.valueOf(calculatedAge));
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult result) {
+                        if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                            int calculatedAge = result.getData().getIntExtra("calculatedAge", -1);
+                            if (calculatedAge != -1) {
+                                tvAgeDisplayValue.setText(String.valueOf(calculatedAge));
 
-                            // אם אתה גם רוצה לעדכן את ה-EditText של גיל:
-                            etAge.setText(String.valueOf(calculatedAge));
+                                // אם אתה גם רוצה לעדכן את ה-EditText של גיל:
+                                etAge.setText(String.valueOf(calculatedAge));
+                            }
                         }
                     }
                 }
